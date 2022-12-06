@@ -1,8 +1,8 @@
 import React from "react";
 import { HiMenuAlt4 } from "react-icons/hi";
 import { AiOutlineClose } from "react-icons/ai";
-
-import logo from "../images/images/logo.png";
+import comingsoon from "../images/images/eth-comingsoon.gif";
+import GradientBtn from "./GradientBtn";
 
 const NavBarItem = ({ title, classprops }) => (
   <li className={`mx-4 cursor-pointer ${classprops}`}>{title}</li>
@@ -12,16 +12,23 @@ const Navbar = () => {
   const [toggleMenu, setToggleMenu] = React.useState(false);
 
   return (
-    <>
-      <nav className="w-full container mx-auto flex md:justify-between justify-between items-center md:px-20 p-4">
-        <img src={logo} alt="logo" className="w-32 cursor-pointer" />
+    <div className="bg-[black] sticky top-0 z-50">
+      <nav className="w-full  z-50 container mx-auto flex md:justify-between justify-between items-center md:px-20 p-4">
+        <div className="flex items-center cursor-pointer">
+          <img
+            src={comingsoon}
+            alt="logo"
+            className="w-20 cursor-pointer border border-transparent rounded-md"
+          />
+          <label className="text-white text-lg font-normal">web3-ethereum</label>F
+        </div>
+
         <ul className="text-white md:flex hidden list-none flex-row justify-between items-center flex-initial">
           {["Market", "Exchange", "Tutorials", "Wallets"].map((item, index) => (
             <NavBarItem key={item + index} title={item} />
           ))}
-          <li className="bg-[#2952e3] py-2 px-7 mx-4 rounded-full cursor-pointer hover:bg-[#2546bd]">
-            Login
-          </li>
+
+          <GradientBtn className="capitalize" title="Login" />
         </ul>
         <div className="flex relative md:hidden ">
           {!toggleMenu && (
@@ -59,7 +66,7 @@ const Navbar = () => {
           )}
         </div>
       </nav>
-    </>
+    </div>
   );
 };
 

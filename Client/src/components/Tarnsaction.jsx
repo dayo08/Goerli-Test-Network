@@ -13,7 +13,7 @@ const TransactionsCard = ({
 }) => {
   return (
     <div
-      className="bg-[#181918] m-4 flex flex-1
+      className="bg-gradient-to-r from-thOrange to-thBlue m-4 flex flex-1
       2xl:min-w-[450px]
       2xl:max-w-[500px]
       sm:min-w-[270px]
@@ -28,7 +28,7 @@ const TransactionsCard = ({
             target="_blank"
             rel="noreferrer"
           >
-            <p className="text-white text-base">
+            <p className="text-black text-base">
               From: {shortenAddress(addressFrom)}
             </p>
           </a>
@@ -37,15 +37,15 @@ const TransactionsCard = ({
             target="_blank"
             rel="noreferrer"
           >
-            <p className="text-white text-base">
+            <p className="text-black text-base">
               To: {shortenAddress(addressTo)}
             </p>
           </a>
-          <p className="text-white text-base">Amount: {amount} ETH</p>
+          <p className="text-black text-base">Amount: {amount} ETH</p>
           {message && (
             <>
               <br />
-              <p className="text-white text-base">Message: {message}</p>
+              <p className="text-black text-base">Message: {message}</p>
             </>
           )}
         </div>
@@ -74,7 +74,7 @@ function Tarnsaction() {
             </h3>
           )}
 
-          <div className="flex flex-wrap justify-between items-center mt-10">
+          <div className="flex flex-wrap justify-between items-center mt-10" >
             {transactions.reverse().map((transactions, i) => (
               <>
                 <TransactionsCard key={i} {...transactions} />

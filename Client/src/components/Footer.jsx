@@ -1,6 +1,6 @@
 import React from "react";
 
-import logo from "../images/images/logo.png";
+import comingsoon from "../images/images/eth-comingsoon.gif";
 const NavBarItem = ({ title, classprops }) => (
   <li className={`mx-4 cursor-pointer ${classprops}`}>{title}</li>
 );
@@ -9,7 +9,7 @@ const Footer = () => (
   <div className="gradient-bg-footer">
     <div className="w-full flex md:justify-center justify-between items-center flex-col px-20 container mx-auto">
       <div className="w-full flex sm:flex-row flex-col justify-between items-center my-4">
-        <img src={logo} alt="logo" className="w-32 cursor-pointer" />
+        <img src={comingsoon} alt="logo" className="w-32 cursor-pointer bg-transparent" />
         <ul className="text-white flex sm:flex-row gap-5 sm:mt-0 my-4 list-none flex-col justify-between items-center flex-initial">
           {["Market", "Exchange", "Tutorials", "Wallets"].map((item, index) => (
             <NavBarItem key={item + index} title={item} />
